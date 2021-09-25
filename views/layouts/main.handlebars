@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble Posts</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/materialize.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+  </head>
+  <body>
+    <nav class="deep-purple lighten-1">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo left" id="logo"><i
+              class="material-icons"
+            >sentiment_very_satisfied</i>Bubble Posts</a>
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i
+              class="material-icons"
+            >menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/posts">
+                <i class="material-icons left">forum</i>
+                All Posts</a></li>
+            <li><a href="/posts/write"><i class="material-icons left">create</i>Write Post</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="sidenav" id="mobile-nav">
+        <li>
+          <a href="/posts">
+            <i class="material-icons left">forum</i>
+            All Posts
+          </a>
+        </li>
+        <li><a href="/posts/write"><i class="material-icons left">create</i>Write Post</a></li>
+      </ul>
+    </nav>
+
+    {{{body}}}
+
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>

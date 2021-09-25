@@ -1,0 +1,29 @@
+{
+  "name": "bubbly-posts",
+  "version": "1.0.0",
+  "description": "A simple server side blog app made with NodeJS, Express, Handlebars and Sequelize",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "Blog",
+    "Nodejs",
+    "Sequelize",
+    "Handlebars"
+  ],
+  "author": "Tolulope Malomo",
+  "license": "MIT",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
