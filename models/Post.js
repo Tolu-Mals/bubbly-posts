@@ -1,4 +1,5 @@
-const { Sequelize } = require('sequelize');
+const { Sequelize, DataTypes } = require('sequelize');
+const moment = require('moment');
 
 const db = require('../config/db');
 
@@ -16,8 +17,11 @@ const  Post = db.define('post', {
         type: Sequelize.STRING
     },
     createdAt: {
-        type: Sequelize.DATE
-    }
+        type: DataTypes.DATE,
+        get() {
+            return moment(this.getDataValue('createdAt')).format('DD/MM/YYYY');
+        }
+}
 })
 
 module.exports = Post;
