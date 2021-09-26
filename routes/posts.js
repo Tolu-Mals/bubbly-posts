@@ -59,10 +59,19 @@ router.post('/write', (req, res) => {
             content,
             keywords,
             author
-        }).then(() => res.redirect('/'))
+        }).then(() => res.redirect('/posts'))
         .catch(err => console.log(err));
     }
 });
+
+//Post Details Page
+router.get('/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+
+    Post.findAll({ where: { id }})  
+    .then((posts) => res.render('postDetail', { posts }))
+    .catch(err => console.log(err));
+})
 
 
 module.exports = router;

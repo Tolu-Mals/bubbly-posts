@@ -88,3 +88,18 @@
   min-height: 100vh;
   background-color: rgb(225, 204, 240);
 }
+
+.posts .card-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.posts .author-date {
+  font-size: 1rem;
+  color: #333;
+}
+
+.posts #cta {
+  color: #673ab7;
+  font-weight: 500;
+}

@@ -4,6 +4,10 @@ const moment = require('moment');
 const db = require('../config/db');
 
 const  Post = db.define('post', {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true
+    },
     title: {
         type: Sequelize.STRING
     },

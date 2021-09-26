@@ -2,17 +2,18 @@
   <div class="container">
     <div class="row">
       {{#each posts}}
-        <div class="col s12 l4">
+        <div class="col s12 m6 l4">
           <div class="card hoverable">
             <div class="card-content">
               <span class="card-title">
                 {{title}}
               </span>
-              <p class="author">by {{author}} | {{createdAt}}</p>
+              <p class="author-date">{{author}} | {{createdAt}}</p>
               <p class="truncate">{{content}}</p>
+              <p>Keywords: {{keywords}}</p>
             </div>
             <div class="card-action">
-              <a href="#">Read More</a>
+              <a href="/posts/{{id}}" id="cta">Read More</a>
             </div>
           </div>
         </div>
