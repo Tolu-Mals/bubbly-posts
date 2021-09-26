@@ -1,0 +1,22 @@
+<main class="posts section">
+  <div class="container">
+    <div class="row">
+      {{#each posts}}
+        <div class="col s12 l4">
+          <div class="card hoverable">
+            <div class="card-content">
+              <span class="card-title">
+                {{title}}
+              </span>
+              <p class="author">by {{author}} | {{createdAt}}</p>
+              <p class="truncate">{{content}}</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</main>

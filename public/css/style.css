@@ -82,3 +82,9 @@
 .write #content {
   margin-bottom: 1rem;
 }
+
+/* Posts Section */
+.posts {
+  min-height: 100vh;
+  background-color: rgb(225, 204, 240);
+}

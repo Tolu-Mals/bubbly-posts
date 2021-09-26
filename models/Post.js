@@ -14,6 +14,9 @@ const  Post = db.define('post', {
     },
     author: {
         type: Sequelize.STRING
+    },
+    createdAt: {
+        type: Sequelize.DATE
     }
 })
 

@@ -5,7 +5,14 @@ const { Sequelize } = require('sequelize');
 
 //Get all posts
 router.get('/', (req, res) => {
-    res.send('List of posts...');
+    Post.findAll()
+    .then((posts) => {
+        res.render('posts', {
+            posts
+        }).catch(err => {
+            console.log(err);
+        })
+    })
 })
 
 
@@ -52,9 +59,7 @@ router.post('/write', (req, res) => {
             content,
             keywords,
             author
-        }).then(() => res.json({
-            msg: 'Post was successfully created'
-        }))
+        }).then(() => res.redirect('/'))
         .catch(err => console.log(err));
     }
 });
