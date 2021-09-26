@@ -4,6 +4,16 @@ const Handlebars = require('handlebars');
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
 const path = require('path');
 
+//Import Database
+const db = require('./config/db');
+
+//Test database
+db.authenticate().then(() => {
+    console.log('Database Connected...');
+}).catch((error) => {
+    console.error('Database not connected, ', error);
+});
+
 const app = express();
 
 //Configure an Handlebars Engine

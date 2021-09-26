@@ -1,17 +1,47 @@
 <div class="container write">
   <h1>Create new post</h1>
 
-  <form action="/posts/write">
+  <form action="/posts/write" method="POST">
     <div class="row">
-      <div class="input-field col s12">
-        <input id="title" type="text" class="validate" name="title" >
+      <div class="input-field col m8 s12">
+        <input id="title" type="text" class="validate" name="title" required>
         <label for="title">Title</label>
       </div>
+    </div>
 
-      <div class="col s12">
-        <textarea name="content" id="content" class="validate" cols="40" rows="10" placeholder="Type your post here"></textarea>
+    <div class="row">
+      <div class="col s12 m8">
+        <textarea
+          name="content"
+          id="content"
+          class="validate"
+          cols="40"
+          rows="10"
+          placeholder="Type your post's content here"
+          required
+          spellcheck="false"
+        ></textarea>
       </div>
-      
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12 m8">
+        <input id="keywords" type="text" class="validate" name="keywords" required>
+        <label for="keywords">Keywords</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12 m8">
+        <input id="author" type="text" class="validate" name="author" required>
+        <label for="author">Author</label>
+      </div>
+
+    </div>
+    <div class="row">
+      <button class="btn waves-effect deep-purple waves-light">
+        Publish
+      </button>
     </div>
   </form>
 </div>

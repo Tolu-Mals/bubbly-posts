@@ -31,6 +31,16 @@
   letter-spacing: 1px;
 }
 
+@media screen and (min-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
 /* Write POst Styles */
 .write h1 {
   font-size: 2.5rem;
@@ -55,5 +65,20 @@
 }
 
 .write textarea:focus {
-    border: 1px solid #673ab7;
+  border: 1px solid #673ab7;
+}
+
+/* valid color */
+.write .input-field input[type="text"].valid {
+  border-bottom: 1px solid #673ab7;
+  box-shadow: 0 1px 0 0 #673ab7;
+}
+/* invalid color */
+.write .input-field input[type="text"].invalid {
+  border-bottom: 1px solid rgb(209, 51, 51);
+  box-shadow: 0 1px 0 0 rgb(209, 51, 51);
+}
+
+.write #content {
+  margin-bottom: 1rem;
 }
