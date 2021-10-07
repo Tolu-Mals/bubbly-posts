@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
-import { format } from 'date-fns';
+const { format } = require('date-fns');
 
 const db = require('../config/db');
 
