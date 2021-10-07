@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const moment = require('moment');
+import { format } from 'date-fns';
 
 const db = require('../config/db');
 
@@ -23,7 +23,7 @@ const  Post = db.define('post', {
     createdAt: {
         type: DataTypes.DATE,
         get() {
-            return moment(this.getDataValue('createdAt')).format('DD/MM/YYYY');
+            return format(new Date(), "do MMMM Y")
         }
 }
 })
