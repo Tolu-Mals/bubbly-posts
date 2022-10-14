@@ -3,6 +3,9 @@ const expressHandlebars = require('express-handlebars');
 const Handlebars = require('handlebars');
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
 const path = require('path');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 //Import Database
 const db = require('./config/db');
